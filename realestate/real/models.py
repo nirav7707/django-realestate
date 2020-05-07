@@ -26,10 +26,11 @@ class product(models.Model):
 
 
 class qfield(models.Model):
-	owner_email=models.EmailField()
-	qmaker_emial=models.EmailField()
-	qmaker_name=models.CharField(max_length=50)
-	qmaker_city=models.CharField(max_length=50)
+	owner_name=models.EmailField()
+	owner_emial=models.EmailField()
+	your_name=models.CharField(max_length=50)
+	your_city=models.CharField(max_length=50)
+	
 
 	def __str__(self):
 		return self.qmaker_name
