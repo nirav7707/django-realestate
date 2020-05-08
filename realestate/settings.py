@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hsyu_m(f#398kc*b&d0)ko4fi!b7b6nl8ts#(q0j-^!1qz3r8j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['buyandinvest-crm1.herokuapp.com','127.0.0.1']
 
 
 # Application definition
