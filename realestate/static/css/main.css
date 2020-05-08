@@ -40,3 +40,9 @@
 	align-content: center;
 	float: center;
 }
+.rounded{
+	
+	height: 400px;
+	width: 600px;
+	margin: 100px;
+}

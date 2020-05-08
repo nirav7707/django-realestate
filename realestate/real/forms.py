@@ -17,8 +17,15 @@ class dproduct(forms.ModelForm):
 
 		}
 
-class qform(forms.Form):
-		owner_name=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}),label="owner_nmae")
-		owner_email=forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}),label="owner_email")
-		your_name=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}),label="your_nmae")
-		your_email=forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}),label="r_email")
+class qform(forms.ModelForm):
+		class Meta:
+			model=qfield
+			fields="__all__"
+			widgets={
+				'owner_name': forms.TextInput(attrs={'class': 'form-control'}),
+				'owner_email': forms.TextInput(attrs={'class': 'form-control'}),
+				'your_name': forms.TextInput(attrs={'class': 'form-control'}),
+				'your_city': forms.TextInput(attrs={'class': 'form-control'}),
+				'your_email': forms.TextInput(attrs={'class': 'form-control'}),
+			}
+			

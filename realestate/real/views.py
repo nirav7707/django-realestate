@@ -20,7 +20,7 @@ def get_value(request,i_id):
 		makequery=qform(request.POST)
 		if makequery.is_valid():
 			makequery.save()
-			return render('/')
+			return redirect('/')
 	context={'get':get,'makequery':makequery}
 	return render(request,'show.html',context)
 
