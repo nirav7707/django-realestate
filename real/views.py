@@ -11,6 +11,12 @@ def main(request):
 	context={'get':eget ,'myfilter':myfilter}
 	return render(request,'home.html',context)
 
+def productview(request):
+	eget=product.objects.all()
+	myfilter=property(request.GET,queryset=eget)
+	eget=myfilter.qs
+	context={'get':eget ,'myfilter':myfilter}
+	return render(request,'product_view.html',context)
 
 def get_value(request,i_id):
 	
@@ -22,7 +28,7 @@ def get_value(request,i_id):
 			makequery.save()
 			return redirect('/')
 	context={'get':get,'makequery':makequery}
-	return render(request,'show.html',context)
+	return render(request,'product_detail.html',context)
 
 
 def create(request):

@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+		<div class="productview">
+			{% for i in get %}
+			<div class="productbox">
+				<div>
+					<img src="{{i.img.url}}" class="pic">
+				</div>
+				<div>
+					<h2>{{i.price}}</h2>
+					<p>{{i.owner_name}}</p>
+					<a href="{% url 'product_detail' i.id %}" class="btn btn-success">View</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+
+
+{% endblock %}

@@ -1,40 +1,32 @@
 {% extends 'main.html' %}
 {% load static %}
-
 {% block content %}
-
-
-
-	<div class="container-fluid" >
-	<h6 class="heading">WE CARE YOUR MONEY</h6>
-	
-	
-	</div>
-	<div class="qform">
-		<form method="get">
-		{% csrf_token %}
-		{{myfilter.form}}
-		<button class="btn btn-outline-success" type="submit">SEARCH</button>
-	</form>
-	</div>
-	<div class="row a">
-		{% for i in get %}
-		<div class="col-lg-4">
-			<img class="thumbnail" src="{{i.img.url}}">
-				<div class="box-element product">
-				<h6><strong>TYPE:{{i.Category}}</strong></h6>
-				<h6><strong>CITY:{{i.city}}</strong></h6>
-				<hr>
-
-				
-				<a class="btn btn-outline-success" href="{% url 'show' i.id  %}">View</a>
-				<h4 style="display: inline-block; float: right"><strong>${{i.price}}</strong></h4>
-
+<section class="showcase">
+			<h2>WE CARE YOUR MONEY</h2>
+			<p></p>
+			<a href="{% url 'product_view' %}">
+				<button class="btn btn-success" type="submit" >Explor now!</button></a>
+		</section>
+		<div class="SERVECES"><h2>OUR SERVECES</h2></div>
+		<section class="maincards">
+			<div class="box">
+				<img src="{% static 'images/land1.jpg' %}">
+				<h2>sale</h2>
+				<p>we sale every things</p>
+				<a href="#">learn more ></a>
 			</div>
-		</div>
+			<div class="box">
+				<img src="{% static 'images/land1.jpg' %}">
+				<h2>Buy</h2>
+				<p>buy your choice</p>
+				<a href="#">Learn more ></a>
+			</div>
+			<div class="box">
+				<img src="{% static 'images/land1.jpg' %}">
+				<h2>help</h2>
+				<p>prediction prices for future</p>
+				<a href="#">Learn more ></a>
+			</div>
 
-		{% endfor %}
-
-		
-	</div>
-{% endblock content %}
+		</section>
+{% endblock %}

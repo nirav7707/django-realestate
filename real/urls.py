@@ -5,7 +5,9 @@ from django.conf import settings
 
 urlpatterns=[
 	path('',views.main,name='home'),
-	path('<int:i_id>',views.get_value,name='show'),
+	path('product_view',views.productview,name="product_view"),
+	# path('<int:i_id>',views.productdetail,name="product_detail"),
+	path('<int:i_id>',views.get_value,name='product_detail'),
 	path('create',views.create,name='create')
 	
 ]
