@@ -72,7 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'realestate.wsgi.application'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -127,3 +127,4 @@ STATICFILES_DIRS=(
 
 MEDIA_URL="/images/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
